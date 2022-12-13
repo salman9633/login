@@ -1,0 +1,22 @@
+body {
+  /* padding: 50px; */
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.card-img{
+  width: 50px;
+  height: 300px;
+}
+
+.card{
+  margin-left: 40px;
+}
+
+.navbar{
+  margin-bottom: 50px;
+}
+

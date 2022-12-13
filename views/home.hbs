@@ -1,0 +1,35 @@
+<nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/list">List</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/table">Table</a>
+                </li>
+            </ul>
+            {{# if user}}
+            <button class="btn btn-outline-success me-3" type="submit">{{user.name}}</button>
+            <form action="/logout">
+                <button class="btn btn-outline-success" type="submit">Signout</button>
+            </form>
+            {{/if}}
+        </div>
+    </div>
+</nav>
+<div class="d-flex">
+    {{#each cards}}
+    <div class="card d-flex" style="width: 18rem;">
+        <img src="{{this.image}}" class="card-img-top card-img" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{this.title}}</h5>
+            <p class="card-text">{{this.movies}}</p>
+            <a href="{{this.link}}" target="_blank" class="btn btn-primary">Click Here</a>
+        </div>
+    </div>
+    {{/each}}
+</div>
